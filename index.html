@@ -22,6 +22,60 @@
             overflow-x: hidden;
         }
 
+.internship-library {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.1);
+}
+
+.internship-library h3 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.internship-library p {
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.internship-library ul {
+    list-style: none;
+    padding: 0;
+}
+
+.internship-library li {
+    margin: 0.8rem 0;
+}
+
+.internship-library a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.internship-library a:hover {
+    color: #00ff88;
+    transform: translateX(5px);
+}
+
+.internship-library i {
+    color: #d4af37;
+    font-size: 1.1rem;
+}
+
+
         /* Animated Background */
         body::before {
             content: '';
@@ -284,7 +338,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #00ffff, #8a2be2);
+            background: linear-gradient(45deg, #00ffff, #20c997);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -324,62 +378,101 @@
             font-size: 1.1rem;
             line-height: 1.8;
         }
+/* Experience Section */
+.experience-timeline {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    gap: 20px; /* space between items */
+    max-width: 1200px; /* optional: center the content */
+    margin: 0 auto;
+}
 
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.timeline-item {
+    flex: 1 1 100%; /* each takes full row */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border-left: 4px solid #00ffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    width: 100%; /* make sure it fills */
+    overflow: hidden;
+}
 
-        .timeline-item {
-            background: rgba(255, 255, 255, 0.1);
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border-left: 4px solid #00ffff;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
 
-        .timeline-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-        }
+.timeline-date {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-        .timeline-date {
-            color: #00ffff;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.timeline-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
 
-        .timeline-title {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
+.timeline-company {
+    color: #00ffff; /* matches website theme */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-        .timeline-company {
-            color: #8a2be2;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
+.timeline-description {
+    color: #ccc;
+    line-height: 1.6;
+}
 
-        .timeline-description {
-            color: #ccc;
-            line-height: 1.6;
-        }
+.timeline-description ul {
+    padding-left: 1rem;
+}
 
-        .timeline-description ul {
-            padding-left: 1rem;
-        }
+.timeline-description li {
+    margin: 0.5rem 0;
+}
 
-        .timeline-description li {
-            margin: 0.5rem 0;
-        }
+/* 🔽 Collapsible Content */
+.timeline-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+/* When expanded */
+.timeline-item.active .timeline-content {
+    max-height: 2000px; /* big enough to fit content */
+    opacity: 1;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 8px 16px;
+    background: #00ffff;
+    color: #0f0f23;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+    background: #00cccc;
+    transform: scale(1.05);
+}
+
 
         /* Skills Section */
         .skills-grid {
@@ -461,7 +554,7 @@
 
         .tech-tag {
             background: rgba(138, 43, 226, 0.2);
-            color: #8a2be2;
+            color: #20c997;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.8rem;
@@ -614,72 +707,495 @@
             <div class="experience-timeline fade-in">
 
             
-                <div class="timeline-item">
-                    <div class="timeline-date">August 2025 - Present</div>
-                    <div class="timeline-title">Internship Trainee</div>
-                    <div class="timeline-company">e& (Etisalat Egypt) - Enterprise Security Department</div> <img src="eand.png" width="115">
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Currently interning within the Enterprise Security Department, gaining hands-on experience with the System Security team</li>
-                            <li>Collaborating on real-world security tasks and system hardening practices under professional mentorship</li>
-                            <li>Exploring additional cybersecurity domains including Network Security, SOC Operations, GRC, and Information Security through orientation sessions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">July - Present 2025</div>
-                    <div class="timeline-title">Trainee</div>
-                    <div class="timeline-company">Digital Egypt Pioneers Initiative (DEPI)</div><img src="depi.png" width="130">
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Learned how to respond to phishing, network, email, IDS, and antivirus alerts using Incident Response Management Systems.</li>
-                            <li>Conduct log, vulnerability, and compliance analysis/remediation.</li>
-                            <li> Hands-on labs and challenges on platforms such as TryHackMe, and others.</li>
-                            <li>Project: Built and documented an Email Phishing Analysis and Detection Tool as part of the capstone.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">August - September 2024</div>
-                    <div class="timeline-title">Network Training Trainee</div>
-                    <div class="timeline-company">Telecom Egypt (WE)</div> <img src="we.png" width="120">
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Completed extensive training on CCNA and gained hands-on experience with networking scenarios</li>
-                            <li>Designed, implemented, and managed network infrastructures</li>
-                            <li>Worked with tools such as Cisco Packet Tracer and Wireshark to troubleshoot and simulate networking environments</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">July - August 2024</div>
-                    <div class="timeline-title">Research Trainee</div>
-                    <div class="timeline-company">Electronics Research Institute (ERI)</div><img src="eri.png" width="140">
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Learned CST Studio Suite and applied it in verifying research papers by redesigning, simulating, and analyzing antenna structures</li>
-                            <li>Gained hands-on experience in mmWave systems, PLC, solar cell measurements, and digital design using MATLAB</li>
-                            <li>Compared simulation results with those presented in published research papers</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">August - September 2023</div>
-                    <div class="timeline-title">Network Testing Trainee</div>
-                    <div class="timeline-company">ACTEL Communications S.A.E</div> <img src="actel.jpeg" width="150">
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Conducted drive tests to evaluate signal strength, call quality, and data speeds in various regions</li>
-                            <li>Analyzed network performance data to identify areas for optimization and improvement</li>
-                        </ul>
-                    </div>
+<!-- e& Internship -->
+<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
+    <!-- Header with logo & info -->
+    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
+        <div class="d-flex align-items-center">
+            <img src="./Logos/eand.png" alt="e& Logo" width="115" class="me-3 rounded">
+            <div>
+                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August 2025 - Present</div>
+                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Internship Trainee</div>
+                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
+                    <a href="https://www.eand.com.eg/portal/index_en.html" target="_blank" style="color:#20c997; text-decoration:none;">
+                        e& (Etisalat Egypt) - Enterprise Security Department
+                    </a>
                 </div>
             </div>
         </div>
+        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
+    </div>
+
+    <!-- Collapsible Content -->
+    <div class="timeline-content">
+        <div class="timeline-description ps-5">
+            <ul>
+                <li>Shadowed the <strong>System Security</strong> and <strong>Security Operations Center (SOC)</strong> teams to understand real-world workflows, tools, and incident response strategies.</li>
+                <li>Attended an orientation across all security teams within the Enterprise Security Department, gaining a holistic understanding of how the organization protects its infrastructure and clients.</li>
+                <li><strong>Information Security (InfoSec):</strong> Learned how policies, risk assessments, and compliance frameworks are applied to secure sensitive business data and ensure regulatory alignment.</li>
+                <li><strong>System Security:</strong> Observed hardening practices on operating systems, patch management, and secure configuration to minimize vulnerabilities in core IT infrastructure.</li>
+                <li><strong>Network Security:</strong> Explored firewalls, intrusion prevention/detection systems, and segmentation strategies that protect enterprise traffic from internal and external threats.</li>
+                <li><strong>Security Operations Center (SOC):</strong> Monitored SIEM alerts, correlated logs, detected anomalies, and escalated incidents. Learned how SOC coordinates rapid responses.</li>
+                <li><strong>Governance, Risk, and Compliance (GRC):</strong> Understood risk frameworks, audit processes, and policies for business resilience and regulatory compliance.</li>
+                <li><strong>B2B Security:</strong> Learned how enterprise customers are provided secure solutions, incident support, and service-level security management.</li>
+                <li><strong>Vendor Management Team:</strong> Learned assessment and secure integration of third-party vendors.</li>
+                <li><strong>Planning Security Team:</strong> Observed long-term security strategy, proactive measures, and future technology adoption.</li>
+                <li>Recognized team collaboration across SOC, Network/System, InfoSec, GRC, and Planning to maintain a strong security posture.</li>
+                <li>The <strong>SOC experience</strong> provided hands-on exposure to real-time monitoring, detection, and incident escalation processes.</li>
+            </ul>
+
+            <!-- Internship Library PDFs -->
+            <div class="internship-library mt-3">
+                <h5><i class="fa-solid fa-folder-open"></i> Internship Library</h5>
+                <p>All my assignments, projects, and reports from this internship:</p>
+                <ul>
+                    <li><a href="./e&/Report-OWASP_Top_10.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Research - OWASP Top 10</a></li>
+                    <li><a href="./e&/Report-PCI_DSS__ISO_27001__NIST.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Research - PCI-DSS, ISO 27001, NIST</a></li>
+                    <li><a href="./e&/Report-Risk_Assessment.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - How to Prepare for Your First Risk Assessment</a></li>
+                    <li><a href="./e&/Report-Threat_modeling_STRIDE.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Threat Modeling Using STRIDE for Web Applications</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle content for all timeline items
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
+            content.classList.toggle('show');
+            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
+        });
+    });
+</script>
+
+<style>
+    .timeline-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .timeline-content.show {
+        max-height: 5000px;
+    }
+
+    .toggle-btn {
+        font-weight: bold;
+    }
+
+    .timeline-item ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h5 {
+        color: #00ffff;
+    }
+
+    .timeline-description li {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<!-- DEPI Training -->
+<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
+    <!-- Header with logo & info -->
+    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
+        <div class="d-flex align-items-center">
+            <img src="./Logos/depi.png" alt="DEPI Logo" width="130" class="me-3 rounded">
+            <div>
+                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">July - Present 2025</div>
+                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Trainee</div>
+                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
+                    <a href="https://depi.gov.eg/" target="_blank" style="color:#20c997; text-decoration:none;">Digital Egypt Pioneers Initiative (DEPI)</a>
+                </div>
+            </div>
+        </div>
+        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
+    </div>
+
+    <!-- Collapsible Content -->
+    <div class="timeline-content">
+        <div class="timeline-description ps-5">
+            <ul>
+                <li><strong>Cybersecurity Basics:</strong> Gained solid foundational knowledge in threats, vulnerabilities, and attack techniques through structured training and guided labs.</li>
+                <li><strong>Hands-on Labs (TryHackMe & Real Scenarios):</strong> Practiced incident response, log analysis, vulnerability remediation, and simulated phishing campaigns in controlled environments.</li>
+                <li><strong>Incident Response Training:</strong> Learned to handle alerts related to phishing, malware, IDS/IPS, and antivirus using Incident Response Management Systems.</li>
+                <li><strong>Evidence Handling:</strong> Trained in securely collecting, collating, and storing forensic evidence for investigations and compliance purposes.</li>
+                <li><strong>Report Writing & Security Briefs:</strong> Drafted structured reports, threat briefs, and incident escalation summaries to support SOC and management teams.</li>
+                <li><strong>Capstone Project:</strong> Built and documented an <em>Email Phishing Analysis & Detection Tool</em> as part of the technical project, combining detection techniques with reporting workflows.</li>
+            </ul>
+
+            <h5 class="mt-3"><i class="fa-solid fa-book-open"></i> Technical Course Content</h5>
+            <ul>
+                <li>Intro to Threats, Vulnerabilities, and Incident</li>
+                <li>Finding Security Vulnerabilities</li>
+                <li>Fixing Security Vulnerabilities</li>
+                <li>Preparing for Inevitable Attacks</li>
+                <li>Capstone Project</li>
+                <li>Prompt Engineering</li>
+                <li>Assessing Threats</li>
+                <li>Project: Navigating a Cybersecurity Incident</li>
+            </ul>
+
+            <h5 class="mt-3"><i class="fa-solid fa-user-group"></i> Soft Skills Training</h5>
+            <ul>
+                <li><strong>Professional Branding:</strong> Built an optimized CV and LinkedIn profile tailored for cybersecurity opportunities.</li>
+                <li><strong>Presentation Skills:</strong> Delivered technical and non-technical presentations with feedback and improvement guidance.</li>
+                <li><strong>Freelancing & Portfolio Building:</strong> Learned strategies to showcase technical work and monetize cybersecurity skills in the freelancing market.</li>
+                <li><strong>Practical Application:</strong> All soft skills were taught with hands-on exercises, ensuring they directly supported our technical career growth.</li>
+            </ul>
+
+            <p class="mt-3">
+                This training was comprehensive—balancing <strong>technical expertise</strong> with <strong>soft skills</strong>, making me industry-ready as a <em>Cyber Security Incident Response Analyst</em>.
+            </p>
+
+            <!-- Training Library PDFs -->
+            <div class="internship-library mt-3">
+                <h5><i class="fa-solid fa-folder-open"></i> Training Library</h5>
+                <p>Assignments, labs, and projects completed during the DEPI training:</p>
+                <ul>
+                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Cybersecurity Awareness Best
+ Practices</a></li>
+                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Systems Hardening and
+ Cybersecurity</a></li>
+                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment3.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Digital Signatures, Hashing, and
+ Steganography</a></li>
+                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment4.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Challenges in Implementing Identity
+ Management Solutions and Security
+ Incident Examples</a></li>
+                     <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment5.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Types of Malware and Their
+ Characteristics</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle content for all timeline items
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
+            content.classList.toggle('show');
+            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
+        });
+    });
+</script>
+
+<style>
+    .timeline-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .timeline-content.show {
+        max-height: 5000px;
+    }
+
+    .toggle-btn {
+        font-weight: bold;
+    }
+
+    .timeline-item ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h5 {
+        color: #00ffff;
+    }
+
+    .timeline-description li {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<!-- Telecom Egypt (WE) Training -->
+<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
+    <!-- Header with logo & info -->
+    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
+        <div class="d-flex align-items-center">
+            <img src="./Logos/we.png" alt="Telecom Egypt Logo" width="120" class="me-3 rounded">
+            <div>
+                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August - September 2024</div>
+                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Network Training Trainee</div>
+                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
+                    <a href="https://te.eg/wps/portal/te/Personal" target="_blank" style="color:#20c997; text-decoration:none;">Telecom Egypt (WE)</a>
+                </div>
+            </div>
+        </div>
+        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
+    </div>
+
+    <!-- Collapsible Content -->
+    <div class="timeline-content">
+        <div class="timeline-description ps-5">
+            <ul>
+                <li>Completed extensive training on <strong>CCNA 200-301</strong> with hands-on labs and real-world scenarios.</li>
+                <li>Designed, implemented, and managed <strong>network infrastructures</strong> for both small and enterprise setups.</li>
+                <li>Worked with tools such as <strong>Cisco Packet Tracer</strong> and <strong>Wireshark</strong> for troubleshooting, monitoring, and simulation.</li>
+                <li>Acquired expertise in <strong>LAN/WAN technologies, IPv4/IPv6 routing, VLANs, OSPF, ACLs, NAT, STP</strong>, and network security basics.</li>
+                <li>Gained experience in <strong>troubleshooting methodologies</strong> and applying Cisco’s structured approach to network problem solving.</li>
+            </ul>
+
+            <!-- Training Resources -->
+            <div class="timeline-library mt-3">
+                <h5><i class="fa-solid fa-book-open"></i> Training Resources & Tools</h5>
+                <ul>
+                    <li><i class="fa-solid fa-book"></i> Official Cisco Press CCNA 200-301 materials</li>
+                    <li><i class="fa-solid fa-laptop-code"></i> Cisco Packet Tracer for labs and simulations</li>
+                    <li><i class="fa-solid fa-network-wired"></i> Practice with Cisco routers & switches</li>
+                    <li><i class="fa-solid fa-shield-halved"></i> Wireshark for packet analysis & troubleshooting</li>
+                    <li><i class="fa-solid fa-file-lines"></i> Lab reports & configuration exercises</li>
+                </ul>
+            </div>
+
+            <!-- Training Library PDFs -->
+            <div class="internship-library mt-3">
+                <h5><i class="fa-solid fa-folder-open"></i> Training Library</h5>
+                <p>Assignments, labs, and projects completed during the Telecom Egypt (WE) training:</p>
+                <ul>
+                    <li><a href="pdfs/we_lab1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Lab Report - VLAN & Subnetting</a></li>
+                    <li><a href="pdfs/we_lab2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Routing & OSPF Configuration</a></li>
+                    <li><a href="pdfs/we_lab3.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Network Security & ACLs Report</a></li>
+                    <li><a href="pdfs/we_project.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Capstone Project - Enterprise Network Design</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle content for all timeline items
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
+            content.classList.toggle('show');
+            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
+        });
+    });
+</script>
+
+<style>
+    .timeline-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .timeline-content.show {
+        max-height: 5000px;
+    }
+
+    .toggle-btn {
+        font-weight: bold;
+    }
+
+    .timeline-item ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h5 {
+        color: #00ffff;
+    }
+
+    .timeline-description li {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+
+<!-- Electronics Research Institute (ERI) Research Training -->
+<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
+    <!-- Header with logo & info -->
+    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
+        <div class="d-flex align-items-center">
+            <img src="./Logos/eri.png" alt="ERI Logo" width="140" class="me-3 rounded">
+            <div>
+                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">July - August 2024</div>
+                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Research Trainee</div>
+                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
+                    <a href="http://www.erI.sci.eg" target="_blank" style="color:#20c997; text-decoration:none;">Electronics Research Institute (ERI)</a>
+                </div>
+            </div>
+        </div>
+        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
+    </div>
+
+    <!-- Collapsible Content -->
+    <div class="timeline-content">
+        <div class="timeline-description ps-5">
+            <ul>
+                <li>Designed and implemented planar antenna systems, verifying designs using <strong>CST Studio Suite</strong>.</li>
+                <li>Specialized in <strong>mmWave systems</strong> crucial for future 5G technologies.</li>
+                <li>Gained hands-on knowledge in <strong>PLC</strong>, <strong>solar cell measurements</strong>, and <strong>digital design with MATLAB</strong>.</li>
+                <li>Compared and validated <strong>simulation results</strong> against published research papers.</li>
+            </ul>
+
+            <!-- Research Tools -->
+            <div class="timeline-library mt-3">
+                <h5><i class="fa-solid fa-flask"></i> Research Tools & Platforms</h5>
+                <ul>
+                    <li><i class="fa-solid fa-cube"></i> CST Studio Suite for antenna design & simulation</li>
+                    <li><i class="fa-solid fa-satellite-dish"></i> mmWave systems and 5G experimentation</li>
+                    <li><i class="fa-solid fa-microchip"></i> PLC & solar cell measurement equipment</li>
+                    <li><i class="fa-solid fa-code"></i> MATLAB for digital system design</li>
+                    <li><i class="fa-solid fa-book"></i> Reference research papers for validation</li>
+                </ul>
+            </div>
+
+            <!-- Research Library PDFs -->
+            <div class="internship-library mt-3">
+                <h5><i class="fa-solid fa-folder-open"></i> Research Library</h5>
+                <p>Assignments, simulations, and reports completed during the ERI training:</p>
+                <ul>
+                    <li><a href="pdfs/eri_simulation1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Antenna Design Verification Report</a></li>
+                    <li><a href="pdfs/eri_simulation2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> mmWave Simulation & Analysis</a></li>
+                    <li><a href="pdfs/eri_lab_plc.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> PLC & Solar Cell Measurement Lab</a></li>
+                    <li><a href="pdfs/eri_matlab.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> MATLAB Digital Design Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle content for all timeline items
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
+            content.classList.toggle('show');
+            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
+        });
+    });
+</script>
+
+<style>
+    .timeline-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .timeline-content.show {
+        max-height: 5000px;
+    }
+
+    .toggle-btn {
+        font-weight: bold;
+    }
+
+    .timeline-item ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h5 {
+        color: #00ffff;
+    }
+
+    .timeline-description li {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<!-- ACTEL Communications S.A.E Network Testing -->
+<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
+    <!-- Header with logo & info -->
+    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
+        <div class="d-flex align-items-center">
+            <img src="./Logos/actel.jpeg" alt="ACTEL Logo" width="120" class="me-3 rounded">
+            <div>
+                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August - September 2023</div>
+                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Network Testing Trainee</div>
+                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
+                    <a href="https://actel.com.eg/" target="_blank" style="color:#20c997; text-decoration:none;">ACTEL Communications S.A.E</a>
+                </div>
+            </div>
+        </div>
+        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
+    </div>
+
+    <!-- Collapsible Content -->
+    <div class="timeline-content">
+        <div class="timeline-description ps-5">
+            <ul>
+                <li><strong>Drive Testing:</strong> Conducted tests to evaluate signal strength, call quality, and data speeds in different regions.</li>
+                <li><strong>Network Performance Analysis:</strong> Collected and analyzed data logs to identify weak coverage areas and propose optimizations.</li>
+                <li><strong>Quality of Service (QoS) Improvement:</strong> Assisted in preparing reports and insights that helped enhance user experience.</li>
+            </ul>
+
+            <h5 class="mt-3">📡 Technical Tasks</h5>
+            <ul>
+                <li>Signal strength monitoring (2G/3G/4G)</li>
+                <li>Drive test data collection & processing</li>
+                <li>QoS analysis and KPI evaluation</li>
+                <li>Coverage optimization recommendations</li>
+            </ul>
+
+            <h5 class="mt-3">📊 Tools & Equipment</h5>
+            <ul>
+                <li><i class="fa-solid fa-car-side"></i> Drive Test Kit & GPS-enabled software</li>
+                <li><i class="fa-solid fa-signal"></i> Signal measurement and spectrum analysis tools</li>
+                <li><i class="fa-solid fa-chart-line"></i> Post-processing software for data visualization</li>
+            </ul>
+
+            <!-- Internship Library -->
+            <div class="internship-library mt-3">
+                <h5><i class="fa-solid fa-folder-open"></i> Internship Library</h5>
+                <p>All my reports and logs from this internship are available below:</p>
+                <ul>
+                    <li><a href="pdfs/actel_drive_test.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Drive Test Report & Coverage Maps</a></li>
+                    <li><a href="pdfs/actel_network_analysis.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Network Performance Analysis</a></li>
+                    <li><a href="pdfs/actel_qos_report.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> QoS Optimization Report</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle content for all timeline items
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
+            content.classList.toggle('show');
+            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
+        });
+    });
+</script>
+
+<style>
+    .timeline-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .timeline-content.show {
+        max-height: 5000px; /* large enough for all content */
+    }
+
+    .toggle-btn {
+        font-weight: bold;
+    }
+
+    .timeline-item ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h5 {
+        color: #2ee8b8;
+    }
+
+    .timeline-description li {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+
     </section>
 
     <section id="skills" class="section">
@@ -790,67 +1306,77 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+ <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
+    });
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Dynamic navigation background
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(15, 15, 35, 0.98)';
-            } else {
-                nav.style.background = 'rgba(15, 15, 35, 0.95)';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
         });
+    }, observerOptions);
 
-        // Add typing effect to hero subtitle
-        function typeWriter(text, element, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Dynamic navigation background
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.style.background = 'rgba(15, 15, 35, 0.98)';
+        } else {
+            nav.style.background = 'rgba(15, 15, 35, 0.95)';
         }
+    });
 
-        // Initialize typing effect when page loads
-        window.addEventListener('load', () => {
-            const subtitle = document.querySelector('.hero .subtitle');
-            const originalText = subtitle.textContent;
-            setTimeout(() => {
-                typeWriter(originalText, subtitle, 80);
-            }, 1000);
+    // Add typing effect to hero subtitle
+    function typeWriter(text, element, speed = 100) {
+        let i = 0;
+        element.innerHTML = '';
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    // Initialize typing effect when page loads
+    window.addEventListener('load', () => {
+        const subtitle = document.querySelector('.hero .subtitle');
+        const originalText = subtitle.textContent;
+        setTimeout(() => {
+            typeWriter(originalText, subtitle, 80);
+        }, 1000);
+    });
+
+    // 🔽 Collapsible timeline items (Show More / Show Less)
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.closest('.timeline-item');
+            item.classList.toggle('active');
+            button.textContent = item.classList.contains('active') ? "Show Less" : "Show More";
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
