@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ammar Yasser - Cybersecurity Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-dark: #0a0b1e;
+            --secondary-dark: #1a1b2e;
+            --accent-dark: #252640;
+            --primary-cyan: #00b4d8;
+            --secondary-cyan: #0077b6;
+            --accent-green: #00f5ff;
+            --text-primary: #ffffff;
+            --text-secondary: #b8c4ce;
+            --text-muted: #8892b0;
+            --border-subtle: rgba(100, 255, 218, 0.1);
+            --gradient-primary: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            --gradient-secondary: linear-gradient(135deg, #252640 0%, #1a1b2e 100%);
+            --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 8px 32px rgba(0, 180, 216, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,70 +33,16 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: var(--text-primary);
+            background: var(--primary-dark);
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
         }
 
-.internship-library {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.1);
-}
-
-.internship-library h3 {
-    color: #00ffff;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.internship-library p {
-    color: #aaa;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.internship-library ul {
-    list-style: none;
-    padding: 0;
-}
-
-.internship-library li {
-    margin: 0.8rem 0;
-}
-
-.internship-library a {
-    color: #00ffff;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.internship-library a:hover {
-    color: #00ff88;
-    transform: translateX(5px);
-}
-
-.internship-library i {
-    color: #d4af37;
-    font-size: 1.1rem;
-}
-
-
-        /* Animated Background */
+        /* Enhanced animated background with floating particles */
         body::before {
             content: '';
             position: fixed;
@@ -85,11 +51,11 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(0, 180, 216, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 245, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(37, 38, 64, 0.1) 0%, transparent 50%);
             z-index: -2;
-            animation: backgroundShift 15s ease-in-out infinite;
+            animation: backgroundShift 20s ease-in-out infinite;
         }
 
         /* Floating particles */
@@ -101,109 +67,118 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(0, 255, 136, 0.3), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 255, 0.4), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(138, 43, 226, 0.4), transparent),
-                radial-gradient(2px 2px at 160px 30px, rgba(0, 128, 255, 0.3), transparent);
+                radial-gradient(2px 2px at 20px 30px, rgba(0, 180, 216, 0.4), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(0, 245, 255, 0.3), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(0, 180, 216, 0.5), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(37, 38, 64, 0.4), transparent),
+                radial-gradient(2px 2px at 160px 30px, rgba(0, 119, 182, 0.3), transparent);
             background-repeat: repeat;
             background-size: 200px 100px;
             z-index: -1;
-            animation: particleFloat 20s linear infinite;
+            animation: particleFloat 25s linear infinite;
         }
 
         @keyframes backgroundShift {
             0%, 100% {
                 background: 
-                    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
+                    radial-gradient(circle at 20% 80%, rgba(0, 180, 216, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(0, 245, 255, 0.06) 0%, transparent 50%);
             }
             33% {
                 background: 
-                    radial-gradient(circle at 60% 30%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 20% 70%, rgba(0, 255, 136, 0.12) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+                    radial-gradient(circle at 60% 30%, rgba(0, 180, 216, 0.12) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 70%, rgba(0, 245, 255, 0.08) 0%, transparent 50%);
             }
             66% {
                 background: 
-                    radial-gradient(circle at 80% 60%, rgba(0, 255, 255, 0.12) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 20%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 20% 60%, rgba(138, 43, 226, 0.06) 0%, transparent 50%);
+                    radial-gradient(circle at 80% 60%, rgba(0, 180, 216, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 20%, rgba(0, 245, 255, 0.12) 0%, transparent 50%);
             }
         }
 
         @keyframes particleFloat {
-            0% {
-                transform: translateY(0px) translateX(0px);
-            }
-            33% {
-                transform: translateY(-100px) translateX(50px);
-            }
-            66% {
-                transform: translateY(-200px) translateX(-30px);
-            }
-            100% {
-                transform: translateY(-300px) translateX(0px);
-            }
+            0% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-120px) translateX(60px); }
+            66% { transform: translateY(-240px) translateX(-40px); }
+            100% { transform: translateY(-360px) translateX(0px); }
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 35, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
+        /* Enhanced Bootstrap Navbar */
+        .navbar {
+            background: rgba(10, 11, 30, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
             padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1);
         }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .navbar.scrolled {
+            background: rgba(10, 11, 30, 0.98) !important;
+            box-shadow: var(--shadow-subtle);
         }
 
-        .logo {
+        .navbar-brand {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #00ffff;
-            text-decoration: none;
+            font-weight: 600;
+            color: var(--primary-cyan) !important;
+            transition: color 0.3s ease;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .navbar-brand:hover {
+            color: var(--accent-green) !important;
         }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
+        .navbar-nav .nav-link {
+            color: var(--text-secondary) !important;
             font-weight: 500;
+            margin: 0 0.5rem;
+            position: relative;
+            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #00ffff;
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-cyan) !important;
         }
 
-        /* Hero Section */
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 80%;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2800, 180, 216, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Hero Section with enhanced animations */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
             position: relative;
             overflow: hidden;
         }
@@ -215,139 +190,221 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: gridFloat 25s ease-in-out infinite;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.3" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: gridFloat 30s ease-in-out infinite;
+            z-index: -1;
         }
 
         @keyframes gridFloat {
             0%, 100% { 
                 transform: translateY(0px) translateX(0px);
-                opacity: 0.5;
-            }
-            33% { 
-                transform: translateY(-20px) translateX(10px);
                 opacity: 0.3;
             }
+            33% { 
+                transform: translateY(-30px) translateX(20px);
+                opacity: 0.1;
+            }
             66% { 
-                transform: translateY(-10px) translateX(-15px);
-                opacity: 0.7;
+                transform: translateY(-15px) translateX(-25px);
+                opacity: 0.5;
             }
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00ffff, #00ff88);
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 2s ease-in-out infinite alternate;
+            letter-spacing: -0.02em;
+            animation: heroGlow 3s ease-in-out infinite alternate;
         }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
-            to { text-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+        @keyframes heroGlow {
+            from { 
+                filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.3));
+            }
+            to { 
+                filter: drop-shadow(0 0 30px rgba(0, 180, 216, 0.6));
+            }
         }
 
         .hero .subtitle {
             font-size: 1.5rem;
+            font-weight: 500;
             margin-bottom: 2rem;
-            color: #ccc;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
         }
 
         .hero .description {
             font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto 2rem;
-            line-height: 1.8;
-            color: #aaa;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1s forwards;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2rem;
-            background: linear-gradient(45deg, #00ffff, #0080ff);
-            color: white;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
             text-decoration: none;
-            border-radius: 30px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            box-shadow: var(--shadow-subtle);
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.5s forwards, buttonPulse 2s ease-in-out 3s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes buttonPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            color: var(--text-primary);
+            text-decoration: none;
         }
 
-        /* Section Styles */
+        /* Section animations */
         .section {
-            padding: 5rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
         .section:nth-child(even) {
-            background: rgba(255, 255, 255, 0.02);
+            background: var(--secondary-dark);
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #00ffff;
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            color: var(--text-primary);
             position: relative;
+            letter-spacing: -0.02em;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
+            width: 0;
             height: 3px;
-            background: linear-gradient(45deg, #00ffff, #00ff88);
+            background: var(--gradient-primary);
             border-radius: 2px;
+            animation: lineExpand 1s ease 0.5s forwards;
         }
 
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
+        @keyframes lineExpand {
+            to { width: 80px; }
         }
 
+        /* Enhanced Cards with animations */
+        .card {
+            background: var(--gradient-secondary) !important;
+            border: 1px solid var(--border-subtle) !important;
+            border-radius: 16px !important;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-subtle) !important;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-hover) !important;
+            border-color: rgba(0, 180, 216, 0.3) !important;
+        }
+
+        /* Profile card enhancements */
         .profile-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 20px;
+            background: var(--gradient-secondary);
+            padding: 2.5rem;
+            border-radius: 16px;
             text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            overflow: hidden;
         }
 
         .profile-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #00ffff, #20c997);
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             font-size: 4rem;
-            color: white;
+            color: var(--text-primary);
             overflow: hidden;
             position: relative;
             padding: 4px;
+            animation: profilePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes profilePulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 0 20px rgba(0, 180, 216, 0);
+            }
         }
 
         .profile-image img {
@@ -359,303 +416,417 @@
             z-index: 2;
         }
 
-        .contact-info {
-            margin-top: 2rem;
+        .profile-image i {
+            font-size: 4rem;
+            color: var(--text-primary);
         }
 
-        .contact-info p {
-            margin: 0.5rem 0;
-            color: #ccc;
+        /* Timeline animations */
+        .timeline-item {
+            background: var(--gradient-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-info i {
-            color: #00ffff;
-            margin-right: 0.5rem;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.08), transparent);
+            transition: left 0.6s ease;
         }
 
-        .about-text {
-            color: #ccc;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-/* Experience Section */
-.experience-timeline {
-    display: flex;
-    flex-direction: column; /* stack items vertically */
-    gap: 20px; /* space between items */
-    max-width: 1200px; /* optional: center the content */
-    margin: 0 auto;
-}
-
-.timeline-item {
-    flex: 1 1 100%; /* each takes full row */
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border-left: 4px solid #00ffff;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
-    width: 100%; /* make sure it fills */
-    overflow: hidden;
-}
-
-.timeline-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-}
-
-.timeline-date {
-    color: #00ffff;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.timeline-title {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
-
-.timeline-company {
-    color: #00ffff; /* matches website theme */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.timeline-description {
-    color: #ccc;
-    line-height: 1.6;
-}
-
-.timeline-description ul {
-    padding-left: 1rem;
-}
-
-.timeline-description li {
-    margin: 0.5rem 0;
-}
-
-/* 🔽 Collapsible Content */
-.timeline-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.6s ease, opacity 0.4s ease;
-}
-
-/* When expanded */
-.timeline-item.active .timeline-content {
-    max-height: 2000px; /* big enough to fit content */
-    opacity: 1;
-}
-
-/* Toggle Button */
-.toggle-btn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 8px 16px;
-    background: #00ffff;
-    color: #0f0f23;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.toggle-btn:hover {
-    background: #00cccc;
-    transform: scale(1.05);
-}
-
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .timeline-item:hover::before {
+            left: 100%;
         }
 
-        .skill-category {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .timeline-item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 180, 216, 0.2);
         }
 
-        .skill-category h3 {
-            color: #00ffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
+        /* Skill tags with stagger animation */
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .skill-tag {
-            background: linear-gradient(45deg, #00ffff, #0080ff);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--text-primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
             font-size: 0.9rem;
-            font-weight: bold;
+            font-weight: 500;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            transition: all 0.3s ease;
+            animation: skillTagFloat 3s ease-in-out infinite;
+            animation-delay: calc(var(--delay, 0) * 0.1s);
         }
 
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        @keyframes skillTagFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
         }
 
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .skill-tag:hover {
+            background: rgba(0, 180, 216, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            color: var(--accent-green);
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .project-card h3 {
-            color: #00ffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .project-card p {
-            color: #ccc;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: rgba(138, 43, 226, 0.2);
-            color: #20c997;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            border: 1px solid rgba(138, 43, 226, 0.3);
-        }
-
-        /* Contact Section */
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
+        /* Contact links with enhanced animations */
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .contact-link {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
-            color: #00ffff;
+            gap: 0.75rem;
+            color: var(--primary-cyan);
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s, transform 0.3s;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            background: rgba(0, 180, 216, 0.05);
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+            transition: all 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact-link:hover::before {
+            width: 200px;
+            height: 200px;
         }
 
         .contact-link:hover {
-            color: #00ff88;
-            transform: translateY(-3px);
+            color: var(--accent-green);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            background: rgba(0, 180, 216, 0.1);
+            text-decoration: none;
         }
 
         .contact-link i {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(15, 15, 35, 0.9);
-            color: #ccc;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        .contact-link:hover i {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Enhanced button animations */
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary-custom:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Enhanced internship library */
+        .internship-library {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(0, 180, 216, 0.03);
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+            position: relative;
+        }
+
+        .internship-library::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .internship-library:hover::before {
+            opacity: 0.1;
+        }
+
+        .internship-library a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            padding: 0.75rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internship-library a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 180, 216, 0.1);
+            transition: left 0.3s ease;
+        }
+
+        .internship-library a:hover::before {
+            left: 0;
+        }
+
+        .internship-library a:hover {
+            color: var(--accent-green);
+            transform: translateX(8px);
+            text-decoration: none;
+        }
+
+        .hover-glow:hover {
+            color: #00ffff !important;
+            text-shadow: 0 0 8px #00ffff;
+        }
+
+        /* Floating action button */
+        .floating-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: floatingBob 3s ease-in-out infinite;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @keyframes floatingBob {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-hover);
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        /* Enhanced footer */
+        .footer-enhanced {
+            background: var(--primary-dark);
+            border-top: 1px solid var(--border-subtle);
+            padding: 3rem 0 2rem;
+            position: relative;
+        }
+
+        .footer-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            opacity: 0.3;
+        }
+
+        .footer-social-links a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(0, 180, 216, 0.05);
+        }
+
+        .footer-social-links a:hover {
+            color: var(--primary-cyan);
+            background: rgba(0, 180, 216, 0.15);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        /* Loading image fallback */
+        .logo-placeholder {
+            width: 130px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 auto 1rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.75rem;
             }
 
             .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            nav ul {
-                display: none;
+                font-size: 1.3rem;
             }
 
             .contact-links {
                 flex-direction: column;
                 align-items: center;
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+
+            .floating-btn {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
 
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s, transform 0.6s;
+        /* Custom Bootstrap overrides */
+        .text-primary-custom {
+            color: var(--primary-cyan) !important;
         }
 
-        .fade-in.visible {
+        .text-secondary-custom {
+            color: var(--text-secondary) !important;
+        }
+
+        .text-muted-custom {
+            color: var(--text-muted) !important;
+        }
+
+        .bg-dark-custom {
+            background: var(--secondary-dark) !important;
+        }
+
+        /* Loading animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <nav>
+    <!-- Enhanced Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a href="#home" class="logo">Ammar Yasser</a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt me-2"></i>Ammar Yasser
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Ammar Yasser</h1>
@@ -668,715 +839,762 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
-            <div class="about-content fade-in">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <img src="Portrait_1.jpg" alt="Ammar Yasser - Cybersecurity Engineer" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-shield-alt\'></i>';">
-                    </div>
-                    <h3 style="color: white; margin-bottom: 1rem;">SOC Analyst</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
-                        <p><i class="fas fa-envelope"></i> ammaryasserm7@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +20 1108584877</p>
-                        <p><i class="fab fa-linkedin"></i> linkedin.com/in/ammaryasserr</p>
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-start" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 mb-4">
+                    <div class="profile-card">
+                <div class="profile-image">
+                    <img src="Portrait_1.jpg" alt="Ammar Yasser - Cybersecurity Engineer" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-shield-alt\'></i>';">
+                </div>
+                        <h3 class="text-white mb-3 fs-4 fw-semibold">SOC Analyst</h3>
+                        <div class="contact-info">
+                            <p class="mb-2"><i class="fas fa-map-marker-alt text-primary-custom me-2"></i> <strong>Cairo, Egypt</strong></p>
+                            <p class="mb-2"><i class="fas fa-envelope text-primary-custom me-2"></i> <strong>ammaryasserm7@gmail.com</strong></p>
+                            <p class="mb-2"><i class="fas fa-phone text-primary-custom me-2"></i> <strong>+20 1108584877</strong></p>
+                            <p class="mb-0"><i class="fab fa-linkedin text-primary-custom me-2"></i> <strong>linkedin.com/in/ammaryasserr</strong></p>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>
-                        As a SOC Analyst, I help small, medium-sized, and enterprise businesses strengthen their cybersecurity posture by acting as the eye of the security team—constantly monitoring, detecting, and responding to threats in real time using SIEM platforms (Splunk, QRadar), EDR solutions, SOAR, and threat intelligence.
-                    </p>
-                    <br>
-                    <p>
-                        My journey into cybersecurity began with a deep curiosity about how attackers infiltrate networks and how SOC teams catch them, respond to incidents, and defend digital assets. That curiosity grew into a passion for protecting organizations from ever-evolving cyber threats and ensuring business continuity.
-                    </p>
-                    <br>
-                    <p>
-                        I'm currently pursuing my Bachelor's in Electrical Communications and Electronics at Helwan University while gaining hands-on experience through internships and specialized training programs.
-                    </p>
+                <div class="col-lg-8">
+                    <div class="about-text text-secondary-custom fs-5">
+                        <p class="mb-4">
+                            As a <strong class="text-white">SOC Analyst</strong>, I help small, medium-sized, and enterprise businesses strengthen their <strong class="text-white">cybersecurity posture</strong> by acting as the <strong class="text-white">eye of the security team</strong>—constantly monitoring, detecting, and responding to threats in real time using <strong class="text-white">SIEM platforms</strong> (<strong class="text-white">Splunk</strong>, <strong class="text-white">QRadar</strong>), <strong class="text-white">EDR solutions</strong>, <strong class="text-white">SOAR</strong>, and <strong class="text-white">threat intelligence</strong>.
+                        </p>
+                        <p class="mb-4">
+                            My journey into cybersecurity began with a deep curiosity about how <strong class="text-white">attackers infiltrate networks</strong> and how <strong class="text-white">SOC teams</strong> catch them, respond to <strong class="text-white">incidents</strong>, and defend <strong class="text-white">digital assets</strong>. That curiosity grew into a passion for protecting organizations from <strong class="text-white">ever-evolving cyber threats</strong> and ensuring <strong class="text-white">business continuity</strong>.
+                        </p>
+                        <p class="mb-0">
+                            I'm currently pursuing my <strong class="text-white">Bachelor's in Electrical Communications and Electronics</strong> at <strong class="text-white">Helwan University</strong> while gaining <strong class="text-white">hands-on experience</strong> through <strong class="text-white">internships</strong> and <strong class="text-white">specialized training programs</strong>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <!-- Experience Section -->
+    <section id="experience" class="    ">
         <div class="container">
-            <h2 class="section-title fade-in">Experience</h2>
-            <div class="experience-timeline fade-in">
-
+            <h2 class="section-title" data-aos="fade-up">Experience</h2>
             
-<!-- e& Internship -->
-<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
-    <!-- Header with logo & info -->
-    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
-        <div class="d-flex align-items-center">
-            <img src="./Logos/eand.png" alt="e& Logo" width="115" class="me-3 rounded">
-            <div>
-                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August 2025 - Present</div>
-                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Internship Trainee</div>
-                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
-                    <a href="https://www.eand.com.eg/portal/index_en.html" target="_blank" style="color:#20c997; text-decoration:none;">
-                        e& (Etisalat Egypt) - Enterprise Security Department
-                    </a>
+            <!-- e& Internship -->
+            <div class="card mb-4 timeline-item shadow-lg" 
+                 style="background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(20,40,70,0.95)); 
+                        border-left: 5px solid #00ffff; 
+                        border-radius: 15px; 
+                        overflow: hidden;" 
+                 data-aos="fade-right" data-aos-delay="100">
+
+                <div class="card-body p-4">
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+        <a href="https://www.eand.com.eg/portal/index_en.html" target="_blank">
+            <img src="./Logos/eand.png" alt="e& Logo" width="115" class="mb-2 rounded">
+        </a>
+                        <h4 class="text-white fw-bold mb-1">
+                            <i class="fa-solid fa-briefcase me-2 text-info"></i> Internship Trainee
+                        </h4>
+                        <p class="text-primary-custom fw-semibold mb-3">Enterprise Security Department</p>
+                        <button class="btn btn-info text-dark fw-bold toggle-btn rounded-pill px-4" 
+                                type="button" data-bs-toggle="collapse" data-bs-target="#eand-details">
+                            Show More <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="collapse" id="eand-details">
+                        <div class="timeline-description text-start mt-3">
+                            <ul class="text-secondary-custom">
+                                <li class="mb-3">Shadowed the <strong class="text-white">System Security</strong> and <strong class="text-white">SOC</strong> teams to understand real-world workflows, tools, and incident response strategies.</li>
+                                <li class="mb-3">Attended an orientation across all security teams within the Enterprise Security Department, gaining a holistic understanding of organizational defense.</li>
+                                <li class="mb-3"><strong class="text-white">Information Security (InfoSec):</strong> Policies, risk assessments, and compliance frameworks for regulatory alignment.</li>
+                                <li class="mb-3"><strong class="text-white">System Security:</strong> OS hardening, patching, and secure configurations.</li>
+                                <li class="mb-3"><strong class="text-white">Network Security:</strong> Firewalls, IDS/IPS, and segmentation strategies.</li>
+                                <li class="mb-3"><strong class="text-white">SOC:</strong> SIEM monitoring, anomaly detection, and incident escalation.</li>
+                                <li class="mb-3"><strong class="text-white">GRC:</strong> Risk frameworks, audits, and compliance policies.</li>
+                                <li class="mb-3"><strong class="text-white">B2B Security:</strong> Enterprise customer solutions and incident support.</li>
+                                <li class="mb-3"><strong class="text-white">Vendor Management:</strong> Secure integration of third-party vendors.</li>
+                                <li class="mb-3"><strong class="text-white">Planning Security:</strong> Long-term strategy & tech adoption.</li>
+                                <li class="mb-0">Hands-on exposure in <strong class="text-white">SOC monitoring & incident response</strong>.</li>
+                            </ul>
+
+                            <!-- Library -->
+                            <div class="internship-library mt-4">
+                                <h5 class="text-info mb-3">
+                                    <i class="fa-solid fa-folder-open me-2"></i> Internship Library
+                                </h5>
+                                <p class="text-muted-custom">Assignments & reports completed during this internship:</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./e&/Report-OWASP_Top_10.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Research - OWASP Top 10
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./e&/Report-PCI_DSS__ISO_27001__NIST.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Research - PCI-DSS, ISO 27001, NIST
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./e&/Report-Risk_Assessment.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Risk Assessment
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./e&/Report-Threat_modeling_STRIDE.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Threat Modeling (STRIDE)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
-    </div>
 
-    <!-- Collapsible Content -->
-    <div class="timeline-content">
-        <div class="timeline-description ps-5">
-            <ul>
-                <li>Shadowed the <strong>System Security</strong> and <strong>Security Operations Center (SOC)</strong> teams to understand real-world workflows, tools, and incident response strategies.</li>
-                <li>Attended an orientation across all security teams within the Enterprise Security Department, gaining a holistic understanding of how the organization protects its infrastructure and clients.</li>
-                <li><strong>Information Security (InfoSec):</strong> Learned how policies, risk assessments, and compliance frameworks are applied to secure sensitive business data and ensure regulatory alignment.</li>
-                <li><strong>System Security:</strong> Observed hardening practices on operating systems, patch management, and secure configuration to minimize vulnerabilities in core IT infrastructure.</li>
-                <li><strong>Network Security:</strong> Explored firewalls, intrusion prevention/detection systems, and segmentation strategies that protect enterprise traffic from internal and external threats.</li>
-                <li><strong>Security Operations Center (SOC):</strong> Monitored SIEM alerts, correlated logs, detected anomalies, and escalated incidents. Learned how SOC coordinates rapid responses.</li>
-                <li><strong>Governance, Risk, and Compliance (GRC):</strong> Understood risk frameworks, audit processes, and policies for business resilience and regulatory compliance.</li>
-                <li><strong>B2B Security:</strong> Learned how enterprise customers are provided secure solutions, incident support, and service-level security management.</li>
-                <li><strong>Vendor Management Team:</strong> Learned assessment and secure integration of third-party vendors.</li>
-                <li><strong>Planning Security Team:</strong> Observed long-term security strategy, proactive measures, and future technology adoption.</li>
-                <li>Recognized team collaboration across SOC, Network/System, InfoSec, GRC, and Planning to maintain a strong security posture.</li>
-                <li>The <strong>SOC experience</strong> provided hands-on exposure to real-time monitoring, detection, and incident escalation processes.</li>
-            </ul>
+            <!-- ITI Training -->
+            <div class="card mb-4 timeline-item shadow-lg" 
+                 style="background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(30,50,80,0.95)); 
+                        border-left: 5px solid #00ffff; 
+                        border-radius: 15px; 
+                        overflow: hidden;" 
+                 data-aos="fade-left" data-aos-delay="200">
 
-            <!-- Internship Library PDFs -->
-            <div class="internship-library mt-3">
-                <h5><i class="fa-solid fa-folder-open"></i> Internship Library</h5>
-                <p>All my assignments, projects, and reports from this internship:</p>
-                <ul>
-                    <li><a href="./e&/Report-OWASP_Top_10.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Research - OWASP Top 10</a></li>
-                    <li><a href="./e&/Report-PCI_DSS__ISO_27001__NIST.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Research - PCI-DSS, ISO 27001, NIST</a></li>
-                    <li><a href="./e&/Report-Risk_Assessment.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - How to Prepare for Your First Risk Assessment</a></li>
-                    <li><a href="./e&/Report-Threat_modeling_STRIDE.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Threat Modeling Using STRIDE for Web Applications</a></li>
-                </ul>
+                <div class="card-body p-4">
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+        <a href="https://iti.gov.eg/home" target="_blank">
+            <img src="./Logos/iti.svg" alt="ITI Logo" width="160" class="mb-2 rounded">
+        </a>
+                        <h4 class="text-white fw-bold">
+                            <i class="fa-solid fa-graduation-cap me-2 text-info"></i> Trainee
+                        </h4>
+                        <p class="text-primary-custom fw-semibold mb-3">
+                            Information Technology Institute (ITI)
+                        </p>
+                        <button class="btn btn-info text-dark fw-bold toggle-btn rounded-pill px-4" 
+                                type="button" data-bs-toggle="collapse" data-bs-target="#iti-details">
+                            Show More <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="collapse" id="iti-details">
+                        <div class="timeline-description text-start mt-3">
+                            <ul class="text-secondary-custom">
+                                <li class="mb-3"><strong class="text-white">Network Fundamentals:</strong> Learned how networks operate, including IP addressing, switching, and routing.</li>
+                                <li class="mb-3"><strong class="text-white">Advanced Networking:</strong> Studied VLANs, routing protocols, troubleshooting techniques, and network management.</li>
+                                <li class="mb-3"><strong class="text-white">Cyber Security Essentials:</strong> Understood core security concepts, common threats, and basic protection techniques.</li>
+                                <li class="mb-3"><strong class="text-white">Ethical Hacking:</strong> Explored attacker perspectives, penetration testing methods, and vulnerability assessment strategies.</li>
+                                <li class="mb-0"><strong class="text-white">HCCDA – Huawei Cloud Tech Essentials:</strong> Introduced to Huawei Cloud Platform, cloud services fundamentals, and infrastructure deployment essentials.</li>
+                            </ul>
+
+                            <!-- Library -->
+                            <div class="internship-library mt-4">
+                                <h5 class="text-info mb-3">
+                                    <i class="fa-solid fa-folder-open me-2"></i> Training Library
+                                </h5>
+                                <p class="text-muted-custom mb-3">
+                                    Assignments, labs, and projects completed during the ITI training:
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./iti/ITI-Burp_Suite_Task_Report.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Burp Suite
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./iti/ITI-Types of Hackers.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Assignment - Types of Hackers
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <a href="./iti/Report-ITI-Subnetting Questions.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Assignment - IP Subnetting
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <!-- DEPI Training -->
+            <div class="card mb-4 timeline-item shadow-lg" 
+                 style="background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(30,50,80,0.95)); 
+                        border-left: 5px solid #00ffff; 
+                        border-radius: 15px; 
+                        overflow: hidden;" 
+                 data-aos="fade-right" data-aos-delay="300">
+
+                <div class="card-body p-4">
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+        <a href="https://depi.gov.eg/" target="_blank">
+            <img src="./Logos/depi.png" alt="DEPI Logo" width="130" class="mb-2 rounded">
+        </a>
+                        <h4 class="text-white fw-bold">
+                            <i class="fa-solid fa-graduation-cap me-2 text-info"></i> Trainee
+                        </h4>
+                        <p class="text-primary-custom fw-semibold mb-3">
+                            Digital Egypt Pioneers Initiative (DEPI)
+                        </p>
+                        <button class="btn btn-info text-dark fw-bold toggle-btn rounded-pill px-4" 
+                                type="button" data-bs-toggle="collapse" data-bs-target="#depi-details">
+                            Show More <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="collapse" id="depi-details">
+                        <div class="timeline-description text-start mt-3">
+                            <ul class="text-secondary-custom">
+                                <li class="mb-3"><strong class="text-white">Cybersecurity Basics:</strong> Gained solid foundational knowledge in threats, vulnerabilities, and attack techniques through structured training and guided labs.</li>
+                                <li class="mb-3"><strong class="text-white">Hands-on Labs (TryHackMe & Real Scenarios):</strong> Practiced incident response, log analysis, vulnerability remediation, and simulated phishing campaigns in controlled environments.</li>
+                                <li class="mb-3"><strong class="text-white">Incident Response Training:</strong> Learned to handle alerts related to phishing, malware, IDS/IPS, and antivirus using Incident Response Management Systems.</li>
+                                <li class="mb-3"><strong class="text-white">Evidence Handling:</strong> Trained in securely collecting, collating, and storing forensic evidence for investigations and compliance purposes.</li>
+                                <li class="mb-3"><strong class="text-white">Report Writing & Security Briefs:</strong> Drafted structured reports, threat briefs, and incident escalation summaries to support SOC and management teams.</li>
+                                <li class="mb-3"><strong class="text-white">Capstone Project:</strong> Built and documented an <em>Email Phishing Analysis & Detection Tool</em> as part of the technical project, combining detection techniques with reporting workflows.</li>
+                            </ul>
+
+                            <h5 class="text-info mt-4 mb-3"><i class="fa-solid fa-book-open me-2"></i> Technical Course Content</h5>
+                            <ul class="text-secondary-custom">
+                                <li>Intro to Threats, Vulnerabilities, and Incident</li>
+                                <li>Finding Security Vulnerabilities</li>
+                                <li>Fixing Security Vulnerabilities</li>
+                                <li>Preparing for Inevitable Attacks</li>
+                                <li>Capstone Project</li>
+                                <li>Prompt Engineering</li>
+                                <li>Assessing Threats</li>
+                                <li>Project: Navigating a Cybersecurity Incident</li>
+                            </ul>
+
+                            <h5 class="text-info mt-4 mb-3"><i class="fa-solid fa-user-group me-2"></i> Soft Skills Training</h5>
+                            <ul class="text-secondary-custom">
+                                <li class="mb-2"><strong class="text-white">Professional Branding:</strong> Built an optimized CV and LinkedIn profile tailored for cybersecurity opportunities.</li>
+                                <li class="mb-2"><strong class="text-white">Presentation Skills:</strong> Delivered technical and non-technical presentations with feedback and improvement guidance.</li>
+                                <li class="mb-2"><strong class="text-white">Freelancing & Portfolio Building:</strong> Learned strategies to showcase technical work and monetize cybersecurity skills in the freelancing market.</li>
+                                <li class="mb-0"><strong class="text-white">Practical Application:</strong> All soft skills were taught with hands-on exercises, ensuring they directly supported our technical career growth.</li>
+                            </ul>
+
+                            <p class="text-secondary-custom mt-3">
+                                This training was comprehensive—balancing <strong class="text-white">technical expertise</strong> with <strong class="text-white">soft skills</strong>, making me industry-ready as a <em>Cyber Security Incident Response Analyst</em>.
+                            </p>
+
+                            <!-- Library -->
+                            <div class="internship-library mt-4">
+                                <h5 class="text-info mb-3"><i class="fa-solid fa-folder-open me-2"></i> Training Library</h5>
+                                <p class="text-muted-custom mb-3">Assignments, labs, and projects completed during the DEPI training:</p>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-2">
+                                        <a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment1.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Cybersecurity Awareness Best Practices
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment2.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Systems Hardening and Cybersecurity
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment3.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Digital Signatures, Hashing, and Steganography
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment4.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Identity Management Solutions
+                                        </a>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment5.pdf" class="d-flex align-items-center text-decoration-none text-info hover-glow">
+                                            <i class="fa-solid fa-file-pdf me-2"></i> Report - Types of Malware and Their Characteristics
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telecom Egypt (WE) Training -->
+            <div class="card mb-4 timeline-item shadow-lg" 
+                 style="background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(30,50,80,0.95)); 
+                        border-left: 5px solid #00ffff; 
+                        border-radius: 15px; 
+                        overflow: hidden;" 
+                 data-aos="fade-left" data-aos-delay="400">
+
+                <div class="card-body p-4">
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+        <a href="https://te.eg/wps/portal/te/Personal" target="_blank">
+            <img src="./Logos/we.png" alt="WE Telecom Logo" width="120" class="mb-2 rounded">
+        </a>
+                        <h4 class="text-white fw-bold">
+                            <i class="fa-solid fa-network-wired me-2 text-info"></i> Network Training Trainee
+                        </h4>
+                        <p class="text-primary-custom fw-semibold mb-3">Telecom Egypt (WE)</p>
+                        <button class="btn btn-info text-dark fw-bold toggle-btn rounded-pill px-4" 
+                                type="button" data-bs-toggle="collapse" data-bs-target="#we-details">
+                            Show More <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="collapse" id="we-details">
+                        <div class="timeline-description text-start mt-3">
+                            <ul class="text-secondary-custom">
+                                <li class="mb-3">Completed extensive training on <strong class="text-white">CCNA 200-301</strong> with hands-on labs and real-world scenarios.</li>
+                                <li class="mb-3">Designed, implemented, and managed <strong class="text-white">network infrastructures</strong> for both small and enterprise setups.</li>
+                                <li class="mb-3">Worked with tools such as <strong class="text-white">Cisco Packet Tracer</strong> and <strong class="text-white">Wireshark</strong> for troubleshooting, monitoring, and simulation.</li>
+                                <li class="mb-3">Acquired expertise in <strong class="text-white">LAN/WAN technologies, IPv4/IPv6 routing, VLANs, OSPF, ACLs, NAT, STP</strong>, and network security basics.</li>
+                                <li class="mb-0">Gained experience in <strong class="text-white">troubleshooting methodologies</strong> and applying Cisco's structured approach to network problem solving.</li>
+                            </ul>
+ <!-- Training Resources -->
+<div class="timeline-library mt-3">
+    <h5 class="text-info"><i class="fa-solid fa-book-open"></i> Training Resources & Tools</h5>
+    <ul class="text-white" style="padding-left: 1rem;">
+        <li><i class="fa-solid fa-book text-primary-custom me-2"></i> Official Cisco Press CCNA 200-301 materials</li>
+        <li><i class="fa-solid fa-laptop-code text-primary-custom me-2"></i> Cisco Packet Tracer for labs and simulations</li>
+        <li><i class="fa-solid fa-network-wired text-primary-custom me-2"></i> Practice with Cisco routers & switches</li>
+        <li><i class="fa-solid fa-shield-halved text-primary-custom me-2"></i> Wireshark for packet analysis & troubleshooting</li>
+        <li><i class="fa-solid fa-file-lines text-primary-custom me-2"></i> Lab reports & configuration exercises</li>
+    </ul>
+</div>
+
+<!-- Certificates Gallery -->
+<div class="timeline-library mt-3">
+    <h5 class="text-info"><i class="fa-solid fa-certificate"></i> Certificates</h5>
+    <div class="d-flex gap-3 flex-wrap mt-2">
+        <img src="./we/1_CCNA_Introduction_to_Networks_certificate.jpg" alt="CCNA Intro to Networks" class="rounded shadow-sm" style="width:350px; height:auto;">
+        <img src="./we/2_CCNA_Switching_Routing_and_Wirless_Essentials_certificate.jpg" alt="CCNA Switching Routing Wireless" class="rounded shadow-sm" style="width:350px; height:auto;">
+        <img src="./we/3_CCNA_Enterprise_Networking_Security_and_Automation_certificarte.jpg" alt="CCNA Enterprise Security" class="rounded shadow-sm" style="width:350px; height:auto;">
     </div>
 </div>
 
-<script>
-    // Toggle content for all timeline items
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
-        });
-    });
-</script>
-
-<style>
-    .timeline-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    .timeline-content.show {
-        max-height: 5000px;
-    }
-
-    .toggle-btn {
-        font-weight: bold;
-    }
-
-    .timeline-item ul {
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-item h5 {
-        color: #00ffff;
-    }
-
-    .timeline-description li {
-        color: #ccc;
-        margin-bottom: 0.5rem;
-    }
-</style>
-
-<!-- DEPI Training -->
-<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
-    <!-- Header with logo & info -->
-    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
-        <div class="d-flex align-items-center">
-            <img src="./Logos/depi.png" alt="DEPI Logo" width="130" class="me-3 rounded">
-            <div>
-                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">July - Present 2025</div>
-                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Trainee</div>
-                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
-                    <a href="https://depi.gov.eg/" target="_blank" style="color:#20c997; text-decoration:none;">Digital Egypt Pioneers Initiative (DEPI)</a>
-                </div>
-            </div>
-        </div>
-        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
-    </div>
-
-    <!-- Collapsible Content -->
-    <div class="timeline-content">
-        <div class="timeline-description ps-5">
-            <ul>
-                <li><strong>Cybersecurity Basics:</strong> Gained solid foundational knowledge in threats, vulnerabilities, and attack techniques through structured training and guided labs.</li>
-                <li><strong>Hands-on Labs (TryHackMe & Real Scenarios):</strong> Practiced incident response, log analysis, vulnerability remediation, and simulated phishing campaigns in controlled environments.</li>
-                <li><strong>Incident Response Training:</strong> Learned to handle alerts related to phishing, malware, IDS/IPS, and antivirus using Incident Response Management Systems.</li>
-                <li><strong>Evidence Handling:</strong> Trained in securely collecting, collating, and storing forensic evidence for investigations and compliance purposes.</li>
-                <li><strong>Report Writing & Security Briefs:</strong> Drafted structured reports, threat briefs, and incident escalation summaries to support SOC and management teams.</li>
-                <li><strong>Capstone Project:</strong> Built and documented an <em>Email Phishing Analysis & Detection Tool</em> as part of the technical project, combining detection techniques with reporting workflows.</li>
-            </ul>
-
-            <h5 class="mt-3"><i class="fa-solid fa-book-open"></i> Technical Course Content</h5>
-            <ul>
-                <li>Intro to Threats, Vulnerabilities, and Incident</li>
-                <li>Finding Security Vulnerabilities</li>
-                <li>Fixing Security Vulnerabilities</li>
-                <li>Preparing for Inevitable Attacks</li>
-                <li>Capstone Project</li>
-                <li>Prompt Engineering</li>
-                <li>Assessing Threats</li>
-                <li>Project: Navigating a Cybersecurity Incident</li>
-            </ul>
-
-            <h5 class="mt-3"><i class="fa-solid fa-user-group"></i> Soft Skills Training</h5>
-            <ul>
-                <li><strong>Professional Branding:</strong> Built an optimized CV and LinkedIn profile tailored for cybersecurity opportunities.</li>
-                <li><strong>Presentation Skills:</strong> Delivered technical and non-technical presentations with feedback and improvement guidance.</li>
-                <li><strong>Freelancing & Portfolio Building:</strong> Learned strategies to showcase technical work and monetize cybersecurity skills in the freelancing market.</li>
-                <li><strong>Practical Application:</strong> All soft skills were taught with hands-on exercises, ensuring they directly supported our technical career growth.</li>
-            </ul>
-
-            <p class="mt-3">
-                This training was comprehensive—balancing <strong>technical expertise</strong> with <strong>soft skills</strong>, making me industry-ready as a <em>Cyber Security Incident Response Analyst</em>.
-            </p>
-
-            <!-- Training Library PDFs -->
-            <div class="internship-library mt-3">
-                <h5><i class="fa-solid fa-folder-open"></i> Training Library</h5>
-                <p>Assignments, labs, and projects completed during the DEPI training:</p>
-                <ul>
-                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Cybersecurity Awareness Best
- Practices</a></li>
-                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Systems Hardening and
- Cybersecurity</a></li>
-                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment3.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Digital Signatures, Hashing, and
- Steganography</a></li>
-                    <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment4.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Challenges in Implementing Identity
- Management Solutions and Security
- Incident Examples</a></li>
-                     <li><a href="./depi/Technical-Infrastructure and Security - Cyber Security Incident Response Analyst/Assignment5.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Report - Types of Malware and Their
- Characteristics</a></li>
-
-                </ul>
-            </div>
-        </div>
+<!-- Badges Section -->
+<div class="timeline-library mt-3">
+    <h5 class="text-info"><i class="fa-solid fa-award"></i> Badges Earned</h5>
+    <div class="d-flex gap-2 align-items-center mt-2 flex-wrap">
+        <a href="https://www.credly.com/badges/d5fb1ac0-b71a-4c86-9fcf-617dbc5cfe51/public_url" target="_blank">
+            <img src="./we/Badge/1_Badge_ccna-introduction-to-networks.png" alt="CCNA Intro to Networks Badge" class="rounded shadow-sm" style="width:100px; height:auto;" title="CCNA Introduction to Networks">
+        </a>
+        <a href="https://www.credly.com/badges/ec532ccb-fa38-4a2d-9a4d-f27db951ca90/public_url" target="_blank">
+            <img src="./we/Badge/2_Badge_ccna-switching-routing-and-wireless-essentials.1.png" alt="CCNA Switching Routing Wireless Badge" class="rounded shadow-sm" style="width:100px; height:auto;" title="CCNA Switching, Routing, and Wireless Essentials">
+        </a>
+        <a href="https://www.credly.com/badges/5a38cef8-69b7-4dc8-b498-b2f3bc6f9a34/public_url" target="_blank">
+            <img src="./we/Badge/3_ccna-enterprise-networking-security-and-automation.png" alt="CCNA Enterprise Security Badge" class="rounded shadow-sm" style="width:100px; height:auto;" title="CCNA Enterprise Networking, Security, and Automation">
+        </a>
     </div>
 </div>
 
-<script>
-    // Toggle content for all timeline items
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
-        });
-    });
-</script>
-
-<style>
-    .timeline-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    .timeline-content.show {
-        max-height: 5000px;
-    }
-
-    .toggle-btn {
-        font-weight: bold;
-    }
-
-    .timeline-item ul {
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-item h5 {
-        color: #00ffff;
-    }
-
-    .timeline-description li {
-        color: #ccc;
-        margin-bottom: 0.5rem;
-    }
-</style>
-
-<!-- Telecom Egypt (WE) Training -->
-<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
-    <!-- Header with logo & info -->
-    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
-        <div class="d-flex align-items-center">
-            <img src="./Logos/we.png" alt="Telecom Egypt Logo" width="120" class="me-3 rounded">
-            <div>
-                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August - September 2024</div>
-                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Network Training Trainee</div>
-                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
-                    <a href="https://te.eg/wps/portal/te/Personal" target="_blank" style="color:#20c997; text-decoration:none;">Telecom Egypt (WE)</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
-    </div>
-
-    <!-- Collapsible Content -->
-    <div class="timeline-content">
-        <div class="timeline-description ps-5">
-            <ul>
-                <li>Completed extensive training on <strong>CCNA 200-301</strong> with hands-on labs and real-world scenarios.</li>
-                <li>Designed, implemented, and managed <strong>network infrastructures</strong> for both small and enterprise setups.</li>
-                <li>Worked with tools such as <strong>Cisco Packet Tracer</strong> and <strong>Wireshark</strong> for troubleshooting, monitoring, and simulation.</li>
-                <li>Acquired expertise in <strong>LAN/WAN technologies, IPv4/IPv6 routing, VLANs, OSPF, ACLs, NAT, STP</strong>, and network security basics.</li>
-                <li>Gained experience in <strong>troubleshooting methodologies</strong> and applying Cisco’s structured approach to network problem solving.</li>
-            </ul>
-
-            <!-- Training Resources -->
-            <div class="timeline-library mt-3">
-                <h5><i class="fa-solid fa-book-open"></i> Training Resources & Tools</h5>
-                <ul>
-                    <li><i class="fa-solid fa-book"></i> Official Cisco Press CCNA 200-301 materials</li>
-                    <li><i class="fa-solid fa-laptop-code"></i> Cisco Packet Tracer for labs and simulations</li>
-                    <li><i class="fa-solid fa-network-wired"></i> Practice with Cisco routers & switches</li>
-                    <li><i class="fa-solid fa-shield-halved"></i> Wireshark for packet analysis & troubleshooting</li>
-                    <li><i class="fa-solid fa-file-lines"></i> Lab reports & configuration exercises</li>
-                </ul>
-            </div>
-
-            <!-- Training Library PDFs -->
-            <div class="internship-library mt-3">
-                <h5><i class="fa-solid fa-folder-open"></i> Training Library</h5>
-                <p>Assignments, labs, and projects completed during the Telecom Egypt (WE) training:</p>
-                <ul>
-                    <li><a href="pdfs/we_lab1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Lab Report - VLAN & Subnetting</a></li>
-                    <li><a href="pdfs/we_lab2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Routing & OSPF Configuration</a></li>
-                    <li><a href="pdfs/we_lab3.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Network Security & ACLs Report</a></li>
-                    <li><a href="pdfs/we_project.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Capstone Project - Enterprise Network Design</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Toggle content for all timeline items
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
-        });
-    });
-</script>
-
-<style>
-    .timeline-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    .timeline-content.show {
-        max-height: 5000px;
-    }
-
-    .toggle-btn {
-        font-weight: bold;
-    }
-
-    .timeline-item ul {
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-item h5 {
-        color: #00ffff;
-    }
-
-    .timeline-description li {
-        color: #ccc;
-        margin-bottom: 0.5rem;
-    }
-</style>
-
-
-<!-- Electronics Research Institute (ERI) Research Training -->
-<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
-    <!-- Header with logo & info -->
-    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
-        <div class="d-flex align-items-center">
-            <img src="./Logos/eri.png" alt="ERI Logo" width="140" class="me-3 rounded">
-            <div>
-                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">July - August 2024</div>
-                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Research Trainee</div>
-                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
-                    <a href="http://www.erI.sci.eg" target="_blank" style="color:#20c997; text-decoration:none;">Electronics Research Institute (ERI)</a>
-                </div>
-            </div>
-        </div>
-        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
-    </div>
-
-    <!-- Collapsible Content -->
-    <div class="timeline-content">
-        <div class="timeline-description ps-5">
-            <ul>
-                <li>Designed and implemented planar antenna systems, verifying designs using <strong>CST Studio Suite</strong>.</li>
-                <li>Specialized in <strong>mmWave systems</strong> crucial for future 5G technologies.</li>
-                <li>Gained hands-on knowledge in <strong>PLC</strong>, <strong>solar cell measurements</strong>, and <strong>digital design with MATLAB</strong>.</li>
-                <li>Compared and validated <strong>simulation results</strong> against published research papers.</li>
-            </ul>
-
-            <!-- Research Tools -->
-            <div class="timeline-library mt-3">
-                <h5><i class="fa-solid fa-flask"></i> Research Tools & Platforms</h5>
-                <ul>
-                    <li><i class="fa-solid fa-cube"></i> CST Studio Suite for antenna design & simulation</li>
-                    <li><i class="fa-solid fa-satellite-dish"></i> mmWave systems and 5G experimentation</li>
-                    <li><i class="fa-solid fa-microchip"></i> PLC & solar cell measurement equipment</li>
-                    <li><i class="fa-solid fa-code"></i> MATLAB for digital system design</li>
-                    <li><i class="fa-solid fa-book"></i> Reference research papers for validation</li>
-                </ul>
-            </div>
-
-            <!-- Research Library PDFs -->
-            <div class="internship-library mt-3">
-                <h5><i class="fa-solid fa-folder-open"></i> Research Library</h5>
-                <p>Assignments, simulations, and reports completed during the ERI training:</p>
-                <ul>
-                    <li><a href="pdfs/eri_simulation1.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Antenna Design Verification Report</a></li>
-                    <li><a href="pdfs/eri_simulation2.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> mmWave Simulation & Analysis</a></li>
-                    <li><a href="pdfs/eri_lab_plc.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> PLC & Solar Cell Measurement Lab</a></li>
-                    <li><a href="pdfs/eri_matlab.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> MATLAB Digital Design Project</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Toggle content for all timeline items
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
-        });
-    });
-</script>
-
-<style>
-    .timeline-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    .timeline-content.show {
-        max-height: 5000px;
-    }
-
-    .toggle-btn {
-        font-weight: bold;
-    }
-
-    .timeline-item ul {
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-item h5 {
-        color: #00ffff;
-    }
-
-    .timeline-description li {
-        color: #ccc;
-        margin-bottom: 0.5rem;
-    }
-</style>
-
-<!-- ACTEL Communications S.A.E Network Testing -->
-<div class="timeline-item card p-3 mb-4 shadow-sm" style="background: rgba(30,30,50,0.9); border-left: 5px solid #00ffff; border-radius: 12px;">
-    <!-- Header with logo & info -->
-    <div class="d-flex align-items-center justify-content-between timeline-header mb-3">
-        <div class="d-flex align-items-center">
-            <img src="./Logos/actel.jpeg" alt="ACTEL Logo" width="120" class="me-3 rounded">
-            <div>
-                <div class="timeline-date" style="color:#00ffff; font-weight:bold; font-size:0.9rem;">August - September 2023</div>
-                <div class="timeline-title" style="color:white; font-size:1.3rem; font-weight:bold;">Network Testing Trainee</div>
-                <div class="timeline-company" style="color:#20c997; font-weight:bold;">
-                    <a href="https://actel.com.eg/" target="_blank" style="color:#20c997; text-decoration:none;">ACTEL Communications S.A.E</a>
-                </div>
-            </div>
-        </div>
-        <button class="toggle-btn btn btn-info btn-sm">Show More</button>
-    </div>
-
-    <!-- Collapsible Content -->
-    <div class="timeline-content">
-        <div class="timeline-description ps-5">
-            <ul>
-                <li><strong>Drive Testing:</strong> Conducted tests to evaluate signal strength, call quality, and data speeds in different regions.</li>
-                <li><strong>Network Performance Analysis:</strong> Collected and analyzed data logs to identify weak coverage areas and propose optimizations.</li>
-                <li><strong>Quality of Service (QoS) Improvement:</strong> Assisted in preparing reports and insights that helped enhance user experience.</li>
-            </ul>
-
-            <h5 class="mt-3">📡 Technical Tasks</h5>
-            <ul>
-                <li>Signal strength monitoring (2G/3G/4G)</li>
-                <li>Drive test data collection & processing</li>
-                <li>QoS analysis and KPI evaluation</li>
-                <li>Coverage optimization recommendations</li>
-            </ul>
-
-            <h5 class="mt-3">📊 Tools & Equipment</h5>
-            <ul>
-                <li><i class="fa-solid fa-car-side"></i> Drive Test Kit & GPS-enabled software</li>
-                <li><i class="fa-solid fa-signal"></i> Signal measurement and spectrum analysis tools</li>
-                <li><i class="fa-solid fa-chart-line"></i> Post-processing software for data visualization</li>
-            </ul>
-
-            <!-- Internship Library -->
-            <div class="internship-library mt-3">
-                <h5><i class="fa-solid fa-folder-open"></i> Internship Library</h5>
-                <p>All my reports and logs from this internship are available below:</p>
-                <ul>
-                    <li><a href="pdfs/actel_drive_test.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Drive Test Report & Coverage Maps</a></li>
-                    <li><a href="pdfs/actel_network_analysis.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> Network Performance Analysis</a></li>
-                    <li><a href="pdfs/actel_qos_report.pdf" target="_blank" class="text-info"><i class="fa-solid fa-file-pdf"></i> QoS Optimization Report</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Toggle content for all timeline items
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.closest('.timeline-item').querySelector('.timeline-content');
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? 'Show Less' : 'Show More';
-        });
-    });
-</script>
-
-<style>
-    .timeline-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    .timeline-content.show {
-        max-height: 5000px; /* large enough for all content */
-    }
-
-    .toggle-btn {
-        font-weight: bold;
-    }
-
-    .timeline-item ul {
-        margin-bottom: 0.5rem;
-    }
-
-    .timeline-item h5 {
-        color: #2ee8b8;
-    }
-
-    .timeline-description li {
-        color: #ccc;
-        margin-bottom: 0.5rem;
-    }
-</style>
-
-
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Skills & Expertise</h2>
-            <div class="skills-grid fade-in">
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Security Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Splunk</span>
-                        <span class="skill-tag">QRadar</span>
-                        <span class="skill-tag">EDR Solutions</span>
-                        <span class="skill-tag">SOAR</span>
-                        <span class="skill-tag">Threat Intelligence</span>
-                        <span class="skill-tag">Wireshark</span>
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+                
+                <!-- Security Tools -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-shield-alt me-2"></i> Security Tools
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 0">Kaspersky AV</span>
+                                <span class="skill-tag" style="--delay: 1">SMG</span>
+                                <span class="skill-tag" style="--delay: 2">DLP Solutions</span>
+                                <span class="skill-tag" style="--delay: 3">ISE</span>
+                                <span class="skill-tag" style="--delay: 4">PhishRod</span>
+                                <span class="skill-tag" style="--delay: 5">D-Phish</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">MATLAB</span>
+
+                <!-- SOC Tools -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-shield-virus me-2"></i> SOC Tools
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 6">Splunk</span>
+                                <span class="skill-tag" style="--delay: 7">QRadar</span>
+                                <span class="skill-tag" style="--delay: 8">SOAR</span>
+                                <span class="skill-tag" style="--delay: 9">EDR</span>
+                                <span class="skill-tag" style="--delay: 10">ELBK</span>
+                                <span class="skill-tag" style="--delay: 11">Triage & Alert Prioritization</span>
+                                <span class="skill-tag" style="--delay: 12">Log Analysis</span>
+                                <span class="skill-tag" style="--delay: 13">Incident Response</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-network-wired"></i> Networking</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">CCNA</span>
-                        <span class="skill-tag">Cisco Packet Tracer</span>
-                        <span class="skill-tag">Network Security</span>
-                        <span class="skill-tag">Network Analysis</span>
+
+                <!-- Frameworks & Compliance -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-clipboard-check me-2"></i> Frameworks & Compliance
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 14">ISO 27001</span>
+                                <span class="skill-tag" style="--delay: 15">PCI-DSS</span>
+                                <span class="skill-tag" style="--delay: 16">NIST CSF</span>
+                                <span class="skill-tag" style="--delay: 17">GDPR</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cogs"></i> Specializations</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">SOC Operations</span>
-                        <span class="skill-tag">Incident Response</span>
-                        <span class="skill-tag">Threat Detection</span>
-                        <span class="skill-tag">System Security</span>
-                        <span class="skill-tag">GRC</span>
+
+                <!-- Networking & Defensive -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-network-wired me-2"></i> Networking & Defense
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 18">Network Monitoring</span>
+                                <span class="skill-tag" style="--delay: 19">VLANs / Routing / ACLs</span>
+                                <span class="skill-tag" style="--delay: 20">Firewall & IDS/IPS</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Emerging Technologies -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-robot me-2"></i> Emerging Technologies
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 21">AI for Security</span>
+                                <span class="skill-tag" style="--delay: 22">SOAR Automation</span>
+                                <span class="skill-tag" style="--delay: 23">Threat Intelligence</span>
+                                <span class="skill-tag" style="--delay: 24">Zero Trust Security</span>
+                                <span class="skill-tag" style="--delay: 25">Cloud Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary-custom mb-3">
+                                <i class="fas fa-users me-2"></i> Soft Skills
+                            </h5>
+                            <div class="skill-tags">
+                                <span class="skill-tag" style="--delay: 26">Communication & Reporting</span>
+                                <span class="skill-tag" style="--delay: 27">Teamwork</span>
+                                <span class="skill-tag" style="--delay: 28">IT Collaboration</span>
+                                <span class="skill-tag" style="--delay: 29">Presentation Skills</span>
+                                <span class="skill-tag" style="--delay: 30">Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Featured Project</h2>
-            <div class="projects-grid fade-in">
-                <div class="project-card">
-                    <h3><i class="fas fa-satellite-dish"></i> mmWave Four-Element MIMO Antenna Design Verification</h3>
-                    <p>
-                        Verified and simulated a 5G-compatible mmWave Four-Element MIMO antenna for next-generation wireless communications. 
-                        This project involved comprehensive analysis of antenna performance parameters and validation of research findings.
-                    </p>
-                    <p>
-                        <strong>Key Achievements:</strong>
-                    </p>
-                    <ul style="color: #ccc; margin-left: 1rem;">
-                        <li>Successfully replicated and evaluated antenna design using CST Studio Suite</li>
-                        <li>Analyzed S-parameters, gain, radiation patterns, and efficiency metrics</li>
-                        <li>Attempted MATLAB integration for MIMO performance analysis</li>
-                        <li>Validated research paper findings through independent simulation</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">CST Studio Suite</span>
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">5G Technology</span>
-                        <span class="tech-tag">MIMO Systems</span>
-                        <span class="tech-tag">Antenna Design</span>
+            <h2 class="section-title" data-aos="fade-up">Featured Project</h2>
+            <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h3 class="text-white mb-3">
+                                <i class="fas fa-satellite-dish text-primary-custom me-2"></i> 
+                                mmWave Four-Element MIMO Antenna Design Verification
+                            </h3>
+                            
+                            <p class="text-secondary-custom mb-3">
+                                Verified and simulated a 5G-compatible mmWave Four-Element MIMO antenna for next-generation wireless communications. 
+                                This project involved comprehensive analysis of antenna performance parameters and validation of research findings.
+                            </p>
+                            
+                            <p class="text-white fw-semibold mb-3">Key Achievements:</p>
+                            <ul class="text-secondary-custom">
+                                <li class="mb-2">Successfully replicated and evaluated antenna design using CST Studio Suite</li>
+                                <li class="mb-2">Analyzed S-parameters, gain, radiation patterns, and efficiency metrics</li>
+                                <li class="mb-2">Attempted MATLAB integration for MIMO performance analysis</li>
+                                <li class="mb-0">Validated research paper findings through independent simulation</li>
+                            </ul>
+                            
+                            <div class="d-flex flex-wrap gap-2 my-3">
+                                <span class="badge bg-success">CST Studio Suite</span>
+                                <span class="badge bg-warning text-dark">MATLAB</span>
+                                <span class="badge bg-info">5G Technology</span>
+                                <span class="badge bg-primary">MIMO Systems</span>
+                                <span class="badge bg-secondary">Antenna Design</span>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="./eri/Reports/Report_7_Final_Project_2024-07-18.pdf" class="btn btn-outline-info">
+                                    <i class="fa-solid fa-file-pdf me-2"></i> View Project Details
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title fade-in">Let's Connect</h2>
-            <div class="contact-content fade-in">
-                <p style="color: #ccc; font-size: 1.2rem; margin-bottom: 2rem;">
-                    Ready to strengthen your organization's cybersecurity posture? Let's explore how I can help safeguard your digital environment.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:ammaryasserm7@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email Me</span>
-                    </a>
-                    <a href="https://linkedin.com/in/ammaryasserr" class="contact-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="tel:+201108584877" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                        <span>Call Me</span>
-                    </a>
+            <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-8 text-center">
+                    <p class="text-secondary-custom fs-5 mb-4">
+                        Ready to strengthen your organization's cybersecurity posture? Let's explore how I can help safeguard your digital environment.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:ammaryasserm7@gmail.com" class="contact-link" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email Me</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ammaryasserr" class="contact-link" target="_blank" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="tel:+201108584877" class="contact-link" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fas fa-phone"></i>
+                            <span>Call Me</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Enhanced Footer -->
+    <footer class="footer-enhanced">
         <div class="container">
-            <p>&copy; 2025 Ammar Yasser. Protecting digital assets, one threat at a time.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-secondary-custom mb-2 fw-semibold">&copy; 2025 Ammar Yasser</p>
+                    <p class="text-muted-custom mb-0">Protecting digital assets, one threat at a time.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <div class="footer-social-links d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="mailto:ammaryasserm7@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ammaryasserr" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="tel:+201108584877" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
- <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <!-- Floating Action Button -->
+    <a href="#home" class="floating-btn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Enhanced navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
-    });
 
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+        // Enhanced typing effect for hero subtitle
+        function typeWriter(text, element, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            element.style.opacity = '1';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+        // Initialize typing effect when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const subtitle = document.querySelector('.hero .subtitle');
+                if (subtitle) {
+                    const originalText = subtitle.textContent;
+                    typeWriter(originalText, subtitle, 80);
+                }
+            }, 1000);
+        });
+
+        // Enhanced toggle functionality with Bootstrap collapse
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            const targetId = button.getAttribute('data-bs-target');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.addEventListener('shown.bs.collapse', () => {
+                    button.innerHTML = 'Show Less <i class="fas fa-chevron-up ms-2"></i>';
+                });
+                
+                targetElement.addEventListener('hidden.bs.collapse', () => {
+                    button.innerHTML = 'Show More <i class="fas fa-chevron-down ms-2"></i>';
+                });
             }
         });
-    }, observerOptions);
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Dynamic navigation background
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 100) {
-            nav.style.background = 'rgba(15, 15, 35, 0.98)';
-        } else {
-            nav.style.background = 'rgba(15, 15, 35, 0.95)';
-        }
-    });
-
-    // Add typing effect to hero subtitle
-    function typeWriter(text, element, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
+        // Floating button hide/show on scroll
+        const floatingBtn = document.querySelector('.floating-btn');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300 && floatingBtn) {
+                floatingBtn.style.opacity = '1';
+                floatingBtn.style.visibility = 'visible';
+            } else if (floatingBtn) {
+                floatingBtn.style.opacity = '0';
+                floatingBtn.style.visibility = 'hidden';
             }
-        }
-        type();
-    }
-
-    // Initialize typing effect when page loads
-    window.addEventListener('load', () => {
-        const subtitle = document.querySelector('.hero .subtitle');
-        const originalText = subtitle.textContent;
-        setTimeout(() => {
-            typeWriter(originalText, subtitle, 80);
-        }, 1000);
-    });
-
-    // 🔽 Collapsible timeline items (Show More / Show Less)
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const item = button.closest('.timeline-item');
-            item.classList.toggle('active');
-            button.textContent = item.classList.contains('active') ? "Show Less" : "Show More";
         });
-    });
-</script>
+
+        // Add intersection observer for custom animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger section title animation
+                    if (entry.target.classList.contains('section-title')) {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll, .section-title').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced navbar active link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        function updateActiveNavLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        window.addEventListener('load', updateActiveNavLink);
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (hero && heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight);
+            }
+        });
+
+        // Error handling for missing images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    this.style.display = 'none';
+                    if (this.alt.includes('Logo')) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'logo-placeholder';
+                        placeholder.textContent = this.alt.split(' ')[0];
+                        this.parentNode.replaceChild(placeholder, this);
+                    }
+                };
+            });
+        });
+    </script>
 
 </body>
 </html>
